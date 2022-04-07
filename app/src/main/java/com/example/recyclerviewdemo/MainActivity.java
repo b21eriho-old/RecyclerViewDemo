@@ -1,6 +1,7 @@
 package com.example.recyclerviewdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -21,5 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         RW = findViewById(R.id.recy_view);
 
+        MountainAdapter mountainAdapter = new MountainAdapter(mountains);
+        RW.setAdapter(mountainAdapter);
+        RW.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
     }
 }
